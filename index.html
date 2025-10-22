@@ -13,11 +13,28 @@
   <div class="top-bar">
     <div class="top-bar-container">
       <ul class="top-links">
-        <li><a href="#">BUSINESSES</a></li>
-        <li><a href="#">AFFILIATIONS</a></li>
+        <li><a href="#">COMPANY</a></li>
+        <li><a href="#affiliation">AFFILIATIONS</a></li>
 
         <li><a href="#"><i class="fas fa-search"></i></a></li>
-        <li><a href="#"><i class="fas fa-language"></i></a></li>
+        <!-- Language Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+            <li><a class="dropdown-item" href="#">English</a></li>
+            <li><a class="dropdown-item" href="#">Mandarin Chinese</a></li>
+            <li><a class="dropdown-item" href="#">Hindi</a></li>
+            <li><a class="dropdown-item" href="#">Spanish</a></li>
+            <li><a class="dropdown-item" href="#">French</a></li>
+            <li><a class="dropdown-item" href="#">Arabic</a></li>
+            <li><a class="dropdown-item" href="#">Bengali</a></li>
+            <li><a class="dropdown-item" href="#">Russian</a></li>
+            <li><a class="dropdown-item" href="#">Portuguese</a></li>
+            <li><a class="dropdown-item" href="#">Urdu</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -33,11 +50,30 @@
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse navbar-container" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
-        <li class="nav-item active"><a class="nav-link" href="#">ABOUT  US</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">LISTINGS</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
-        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-heart"></i> Favorites</a></li>
+        <li class="nav-item active"><a class="nav-link" href="#about-us">ABOUT  US</a></li>
+        <!-- LISTINGS DROPDOWN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownListings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              LISTINGS
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownListings">
+              <li><a class="dropdown-item" href="#featured">Pahrump</a></li>
+              <li><a class="dropdown-item" href="#featured">Las Vegas</a></li>
+            </ul>
+          </li>
+        <!-- SERVICES DROPDOWN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              SERVICES
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+              <li><a class="dropdown-item" href="#services">Real Estate Done Right</a></li>
+              <li><a class="dropdown-item" href="#services">Commercial & Residential</a></li>
+              <li><a class="dropdown-item" href="#services">Rely on Expertise</a></li>
+            </ul>
+          </li>
+        <li class="nav-item"><a class="nav-link" href="#contact">CONTACT US</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Favorites</a></li>
       </ul>
     </div>
   </nav>
@@ -47,12 +83,12 @@
     <div class="container">
       <h1><strong>MARCI METZGER - THE RIDGE REALTY GROUP</strong></h1>
       <h2>Pahrump Realtor</h2>
-      <a href="menu.php"><button>Call Now</button></a>
+      <a href="menu.php"><button><strong>Call Now</strong></button></a>
     </div>
   </section>
 
   <!--About Us-->
-<div class="about-us container">
+<div id="about-us" class="about-us container">
 <section id="left-content" class="left-section">
   <div class="container left-container">
     <div class="left-text">
@@ -79,13 +115,14 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
   <div class="black-bar"></div>
 
     <!-- Featured Properties Section -->
-  <section class="featured-properties">
+  <section id="featured" class="featured-properties">
     <div class="featured-container">
       <h2 class="section-title">FEATURED PROPERTIES</h2>
       <p class="section-subtitle">
         EXPLORE A SELECTION OF OUR FINEST PROPERTIES. CLICK ON ANY LISTING TO VIEW
         MORE DETAILS OR BROWSE OUR COMPLETE PHOTO GALLERY.
       </p>
+
 
 <div class="property-grid">
   <!-- Property 1 -->
@@ -147,7 +184,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
   </section>
 
     <!-- Top black bar -->
-  <div class="black-bar"></div>
+  <div id="affiliation" class="black-bar"></div>
 
   <!-- Logos Section -->
   <section class="logo-section">
@@ -166,10 +203,10 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
 <div id="search-overlay" class="search-overlay">
   <div class="search-content">
     <span class="close-search">&times;</span>
-    <h2>Search Listings</h2>
+    <h2 class="section-title">Search Listings</h2>
     <form id="searchForm">
       <div class="form-row">
-        <label>Location</label>
+        <label><b>Location</b></label>
         <select>
           <option>Any</option>
           <option>Pahrump</option>
@@ -178,7 +215,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
       </div>
 
       <div class="form-row">
-        <label>Type</label>
+        <label><b>Type</b></label>
         <select>
           <option>Any</option>
           <option>House</option>
@@ -187,7 +224,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
       </div>
 
       <div class="form-row">
-        <label>Sort By</label>
+        <label><b>Sort By</b></label>
         <select>
           <option>Newest</option>
           <option>Price (Low to High)</option>
@@ -196,7 +233,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
       </div>
 
       <div class="form-row">
-        <label>Bedrooms</label>
+        <label><b>Bedrooms</b></label>
         <select>
           <option>Any</option>
           <option>1+</option>
@@ -206,7 +243,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
       </div>
 
       <div class="form-row">
-        <label>Baths</label>
+        <label><b>Baths</b></label>
         <select>
           <option>Any</option>
           <option>1+</option>
@@ -216,21 +253,23 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
       </div>
 
       <div class="form-row">
-        <label>Min Price</label>
+        <label><b>Min Price</b></label>
         <input type="number" placeholder="$">
       </div>
 
       <div class="form-row">
-        <label>Max Price</label>
+        <label><b>Max Price</b></label>
         <input type="number" placeholder="$">
       </div>
 
-      <button type="button" class="search-btn">Search Now</button>
+      <button type="button" class="search-btn"><b>Search Now</b></button>
     </form>
   </div>
 </div>
 
- <h2 class="section-title">Our Services</h2>
+ <h2 id="services" class="section-title">Our Services</h2>
+
+ <hr class="divider">
 
   <div class="services-section">
 
@@ -288,6 +327,103 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
     </div>
   </section>
 
+  <!-- Get It Sold Section -->
+  <section class="get-it-sold">
+  <h2 class="section-title">GET IT SOLD</h2>
+  
+  <hr class="divider">
+
+  <div class="sold-grid">
+    <div class="sold-card">
+      <img src="assets/imgs/sold1.png" alt="Top Residential Sales">
+      <div class="sold-content">
+        <h3>Top Residential Sales Last 5 Years</h3>
+        <p>We helped nearly 90 clients in 2021, and closed 28.5 million in sales! Our team works hard everyday to grow and learn.</p>
+      </div>
+    </div>
+
+    <div class="sold-card">
+      <img src="assets/imgs/sold2.png" alt="Don't Just List It">
+      <div class="sold-content">
+        <h3>Don't Just List it...</h3>
+        <p>We ensure our listings reach every possible buyer, helping you get top dollar for your home.</p>
+      </div>
+    </div>
+
+    <div class="sold-card">
+      <img src="assets/imgs/sold3.png" alt="Guide to Buyers">
+      <div class="sold-content">
+        <h3>Guide to Buyers</h3>
+        <p>Nobody knows the market like we do. Enjoy having a pro at your service with analysis, upgrades, and trusted contractors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2 class="section-title">Call or Visit</h2>
+
+  <hr class="divider">
+  
+  <div class="container contact-container">
+    <!-- Left: Contact Form -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter your full name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label>Phone Number (Optional)</label>
+          <input type="text" placeholder="Enter your phone number" />
+        </div>
+
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Write your message here..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Right: Contact Information -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Marci Metzger - The Ridge Realty Group</strong></p>
+
+      <p><strong>Address:</strong> 3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</p>
+      <p><strong>Phone:</strong> (206) 919-6886</p>
+      <p><strong>Email:</strong> marci.metzger@example.com</p>
+
+      <p><strong>Office Hours:</strong><br>
+        Open today: 08:00 AM – 07:00 PM<br>
+        Open daily: 8:00 AM – 7:00 PM<br>
+        Appointments outside office hours available upon request. Just call!
+      </p>
+
+      <a href="#" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Message on WhatsApp</a>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.418084303056!2d-116.009!3d36.2106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8f94fca09a5ff%3A0x4a07adfdcba3ff41!2sPahrump%2C%20NV!5e0!3m2!1sen!2sus!4v1696500000000!5m2!1sen!2sus"
+          width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
@@ -296,4 +432,32 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
    <script src="assets/js/script.js"></script>
    
 </body>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- Left: Social Media Icons -->
+    <div class="footer-left">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-yelp"></i></a>
+    </div>
+
+    <!-- Right: App Store and Google Play Badges -->
+    <div class="footer-right">
+      <img src="assets/imgs/appstore.png" alt="Download on the App Store" class="store-badge">
+      <img src="assets/imgs/googleplay.png" alt="Get it on Google Play" class="store-badge">
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <!-- Bottom Section -->
+  <div class="footer-bottom">
+    <p>COPYRIGHT © 2023 MARCI METZGER HOMES - ALL RIGHTS RESERVED</p>
+    <div class="bottom-line"></div>
+    <p class="powered-text">POWERED BY</p>
+    <img src="assets/imgs/godaddyblack.png" alt="GoDaddy Airo" class="powered-logo">
+  </div>
+</footer>
 </html>

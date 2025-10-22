@@ -39,11 +39,14 @@ const nextBtn = document.querySelector(".next");
 let currentIndex = 0;
 const totalSlides = slides.length;
 
+// ✅ calculate slide width dynamically (including margins)
 function updateGallery() {
-  const offset = -currentIndex * 100; // shift by full width
-  track.style.transform = `translateX(${offset}%)`;
+  const slideWidth = slides[0].getBoundingClientRect().width +  (slides[0].offsetLeft - slides[0].parentElement.offsetLeft);
+  const offset = -currentIndex * (slideWidth);
+  track.style.transform = `translateX(${offset}px)`;
 }
 
+// Button listeners
 prevBtn.addEventListener("click", () => {
   currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
   updateGallery();
@@ -54,6 +57,12 @@ nextBtn.addEventListener("click", () => {
   updateGallery();
 });
 
+// Initialize on load
+window.addEventListener("resize", updateGallery);
+updateGallery();
+
+
+
 // Favorite Icon Toggle
 document.querySelectorAll('.favorite-icon').forEach(icon => {
   icon.addEventListener('click', () => {
@@ -63,3 +72,42 @@ document.querySelectorAll('.favorite-icon').forEach(icon => {
     heart.classList.toggle('far');
   });
 });
+
+ document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".contact-form form");
+    const inputs = form.querySelectorAll("input, textarea");
+
+    // Email validation helper
+    function isValidEmail(email) {
+      return email.includes("@") && email.includes(".");
+    }
+
+    // Live validation
+    inputs.forEach((input) => {
+      input.addEventListener("input", () => {
+        const value = input.value.trim();
+
+        // Reset color to black when empty
+        if (value === "") {
+          input.style.borderColor = "black";
+          return;
+        }
+
+        let valid = true;
+
+        // Custom validation logic
+        if (input.type === "email") {
+          valid = isValidEmail(value);
+        } else if (input.tagName.toLowerCase() === "textarea") {
+          valid = value.length >= 5; // message must have at least 5 chars
+        } else if (input.type === "text" && input.previousElementSibling?.innerText.includes("Name")) {
+          valid = value.length >= 2; // name must be at least 2 chars
+        } else if (input.type === "text" && input.previousElementSibling?.innerText.includes("Phone")) {
+          valid = value === "" || /^[0-9+\-()\s]+$/.test(value); // optional field, only numbers/symbols allowed
+        }
+
+        // Apply border color
+        input.style.borderColor = valid ? "green" : "red";
+      });
+    });
+  });
