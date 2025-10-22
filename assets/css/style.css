@@ -1007,40 +1007,83 @@ transition: 0.3s ease-in-out;
 .site-footer {
   background: #000;
   color: #ccc;
-  padding: 30px 60px;
+  padding: 40px 60px;
   border-top: 1px solid #222;
   text-align: center;
   font-family: "Poppins", sans-serif;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
-.footer-left a {
+/* Each section in footer */
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+  animation: slideDown 0.8s ease;
+}
+
+/* Headings inside footer */
+.footer-left h4,
+.footer-center h4,
+.footer-right h4 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* Social icons */
+.footer-left .social-icons a {
   color: #fff;
   font-size: 22px;
-  margin-right: 20px;
+  margin-right: 15px;
   transition: color 0.3s ease;
 }
 
-.footer-left a:hover {
+.footer-left .social-icons a:hover {
   color: #ccc;
 }
 
+/* Center links */
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 8px 0;
+}
+
+.footer-center ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-center ul li a:hover {
+  color: #fff;
+}
+
+/* Right: store badges */
 .footer-right {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 15px;
 }
 
-/* Make both store badges the same size */
 .store-badge {
   width: 170px;
   height: 55px;
@@ -1054,20 +1097,21 @@ transition: 0.3s ease-in-out;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
+/* Divider line */
 .footer-divider {
   border: none;
   height: 1px;
   background: #efefef;
-  margin: 15px auto;
+  margin: 20px auto;
   max-width: 90%;
 }
 
-/* Bottom copyright and GoDaddy section */
+/* Bottom copyright */
 .footer-bottom {
   text-align: center;
   color: #bfbfbf;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .footer-bottom .bottom-line {
@@ -1086,9 +1130,69 @@ transition: 0.3s ease-in-out;
 .footer-bottom .powered-logo {
   height: 28px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Makes it white on black background */
+  filter: brightness(0) invert(1);
   margin-top: 5px;
 }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin: 20px 0;
+  }
+
+  .footer-right {
+    flex-direction: column;
+  }
+
+  .store-badge {
+    width: 150px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 25px 20px;
+  }
+
+  .footer-left .social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  .footer-center ul li a {
+    font-size: 14px;
+  }
+
+  .store-badge {
+    width: 130px;
+    height: 45px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
 
 /* === MOBILE & TABLET RESPONSIVENESS === */
 
