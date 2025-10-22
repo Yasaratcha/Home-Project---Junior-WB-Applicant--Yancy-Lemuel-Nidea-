@@ -89,6 +89,15 @@ body * {
   height: 70px;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1); /* makes it white if background is dark */
+}
+
+
 /* === NAVIGATION BAR (SECOND ROW) === */
 .navbar {
   background-color: #f8f8f8;
@@ -1028,3 +1037,140 @@ transition: 0.3s ease-in-out;
   filter: brightness(0) invert(1); /* Makes it white on black background */
   margin-top: 5px;
 }
+
+/* === MOBILE & TABLET RESPONSIVENESS === */
+
+/* Tablets and smaller laptops */
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .navbar .dropdown-menu {
+    position: static;
+    float: none;
+    box-shadow: none;
+  }
+
+  .left-section {
+    padding: 60px 20px;
+  }
+
+  .left-text h1 {
+    font-size: 2rem;
+  }
+
+  #Home {
+    padding: 0 40px;
+    background-attachment: scroll; /* prevents iOS bug */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .property-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .property-card {
+    width: 80%;
+  }
+
+  .services-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-form,
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact-form {
+    margin-bottom: 40px;
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  #Home {
+    padding: 0 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #Home h1 {
+    font-size: 1.6rem;
+  }
+
+  #Home h2 {
+    font-size: 1.2rem;
+  }
+
+  .container button {
+    font-size: 0.7rem;
+    padding: 10px 25px;
+  }
+
+  .top-links {
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+  }
+
+  .property-card {
+    width: 100%;
+  }
+
+  .logo-container img {
+    height: 60px;
+  }
+
+  .photo-gallery-section .nav {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .divider {
+    width: 80px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer .footer-right {
+    margin-top: 15px;
+  }
+
+  .footer-left a {
+    font-size: 1.2rem;
+  }
+}
+
