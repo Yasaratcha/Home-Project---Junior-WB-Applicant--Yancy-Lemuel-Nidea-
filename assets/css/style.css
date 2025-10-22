@@ -56,7 +56,7 @@ body {
 
 /* === NAVIGATION BAR (SECOND ROW) === */
 .navbar {
-  background-color: #fff;
+  background-color: #f8f8f8;
   border-bottom: 1px solid #e0e0e0;
   padding: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -142,7 +142,7 @@ body {
 }
 
 .about-us{
-   box-shadow: 0 40px 75px -10px rgba(0, 0, 0, 0.4);
+   box-shadow: 0 10px 35px -1px rgba(113, 111, 111, 0.4);
 }
 
 .about-us section:hover{
@@ -215,80 +215,133 @@ transition: 0.3s ease-in-out;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
+/* === FEATURED PROPERTIES === */
 .featured-properties {
+  margin:0;
+  background-color: #f9f9f9;
   text-align: center;
-  padding: 60px 20px;
+  padding: 20px 10px; /* reduced padding for less white space */
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-.featured-container{
-margin-bottom: 20px;
+.featured-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0; /* add slight horizontal breathing space */
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* tightened */
+  color: #1a1a1a;
 }
 
 .section-subtitle {
   font-size: 0.95rem;
   color: #555;
   max-width: 700px;
-  margin: 0 auto 50px;
+  margin: 0 auto 30px; /* reduced bottom margin */
   line-height: 1.5;
 }
 
-/* === Property Grid === */
+/* Property Grid */
 .property-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px; /* reduced from 30px */
 }
 
 .property-card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  width: 320px;
+  outline: solid 1px #ddd;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .property-card img {
   width: 100%;
-  height: 230px;
+  height: 210px; /* slightly smaller to save space */
   object-fit: cover;
 }
 
 .property-info {
+  padding: 18px 20px; /* slightly smaller inner padding */
   text-align: left;
-  padding: 20px;
+}
+
+.property-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px; /* reduced */
 }
 
 .property-info h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-transform: uppercase;
+  color: #222;
 }
 
 .property-info p {
   color: #555;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
 }
 
 .property-info h4 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
+  color: #111;
 }
 
-/* Hover effect */
-.property-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+.favorite-icon {
+  font-size: 1.1rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.favorite-icon:hover {
+  color: #e63946;
+  transform: scale(1.1);
+}
+
+.favorite-icon.active i {
+  color: #e63946;
+}
+
+/* View All Button */
+.view-btn {
+  text-align: center;
+  margin-top: 30px; /* reduced from 50px */
+}
+
+.view-btn button {
+  padding: 10px 28px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.view-btn button:hover {
+  background-color: #333;
 }
 
 /* Black bar styling */
@@ -439,7 +492,7 @@ margin-bottom: 20px;
   to { transform: translateY(0); opacity: 1; }
 }
 
-  h2 {
+  .section-title {
       text-align: center;
       font-size: 40px;
       margin-top: 40px;
@@ -466,6 +519,7 @@ margin-bottom: 20px;
       padding: 20px;
       text-align: center;
       transition: transform 0.3s ease;
+      outline: solid 1px #ddd;
     }
 
     .service-box:hover {
@@ -518,12 +572,6 @@ margin-bottom: 20px;
   text-align: center;
 }
 
-.gallery-header h2 {
-  font-size: 1.8rem;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
 
 /* gallery container */
 .gallery-wrapper {

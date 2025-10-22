@@ -30,14 +30,14 @@
   </div>
 
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="collapse navbar-collapse navbar-container" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active"><a class="nav-link" href="#">ABOUT  US</a></li>
         <li class="nav-item"><a class="nav-link" href="#">LISTINGS</a></li>
         <li class="nav-item"><a class="nav-link" href="#">SERVICES</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">PORTFOLIO</a></li>
         <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-heart"></i> Favorites</a></li>
       </ul>
     </div>
   </nav>
@@ -76,6 +76,8 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
 </section>
 </div>
 
+  <div class="black-bar"></div>
+
     <!-- Featured Properties Section -->
   <section class="featured-properties">
     <div class="featured-container">
@@ -85,37 +87,63 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
         MORE DETAILS OR BROWSE OUR COMPLETE PHOTO GALLERY.
       </p>
 
-      <div class="property-grid">
-        <div class="property-card">
-          <img src="assets/imgs/lounge.png" alt="Spacious Suburban House" />
-          <div class="property-info">
-            <h3>Spacious Suburban House</h3>
-            <p>4 Beds | 3 Baths | 2,500 Sqft</p>
-            <h4>$450,000</h4>
-          </div>
-        </div>
-
-        <div class="property-card">
-          <img src="assets/imgs/house.png" alt="Luxury Downtown Apartment" />
-          <div class="property-info">
-            <h3>Luxury Downtown Apartment</h3>
-            <p>2 Beds | 2 Baths | 1,200 Sqft</p>
-            <h4>$620,000</h4>
-          </div>
-        </div>
-
-        <div class="property-card">
-          <img src="assets/imgs/house2.png" alt="Commercial Retail Space" />
-          <div class="property-info">
-            <h3>Commercial Retail Space</h3>
-            <p>Prime Location | 3,000 Sqft</p>
-            <h4>For Lease</h4>
-          </div>
-        </div>
+<div class="property-grid">
+  <!-- Property 1 -->
+  <div class="property-card">
+    <img src="assets/imgs/lounge.png" alt="Spacious Suburban House" />
+    <div class="property-info">
+      <div class="property-header">
+        <h3>Spacious Suburban House</h3>
+        <div class="favorite-icon"><i class="far fa-heart"></i></div>
       </div>
+      <p>
+        <i class="fas fa-bed"></i> 4 Beds &nbsp;&nbsp;
+        <i class="fas fa-bath"></i> 3 Baths &nbsp;&nbsp;
+        <i class="fas fa-ruler-combined"></i> 2,500 Sqft
+      </p>
+      <h4>$450,000</h4>
+    </div>
+  </div>
+
+  <!-- Property 2 -->
+  <div class="property-card">
+    <img src="assets/imgs/house.png" alt="Luxury Downtown Apartment" />
+    <div class="property-info">
+      <div class="property-header">
+        <h3>Luxury Downtown Apartment</h3>
+        <div class="favorite-icon"><i class="far fa-heart"></i></div>
+      </div>
+      <p>
+        <i class="fas fa-bed"></i> 2 Beds &nbsp;&nbsp;
+        <i class="fas fa-bath"></i> 2 Baths &nbsp;&nbsp;
+        <i class="fas fa-ruler-combined"></i> 1,200 Sqft
+      </p>
+      <h4>$620,000</h4>
+    </div>
+  </div>
+
+  <!-- Property 3 -->
+  <div class="property-card">
+    <img src="assets/imgs/house2.png" alt="Commercial Retail Space" />
+    <div class="property-info">
+      <div class="property-header">
+        <h3>Commercial Retail Space</h3>
+        <div class="favorite-icon"><i class="far fa-heart"></i></div>
+      </div>
+      <p>
+        <i class="fas fa-store"></i> Prime Location &nbsp;&nbsp;
+        <i class="fas fa-ruler-combined"></i> 3,000 Sqft
+      </p>
+      <h4>For Lease</h4>
+    </div>
+  </div>
+</div>
+
+
+    <div class="view-btn">
+    <a href="#"><button>View All</button></a>
     </div>
 
-    <a href="#">View All</a>
   </section>
 
     <!-- Top black bar -->
@@ -239,7 +267,7 @@ I enjoy living in the Mountain Falls community and will strive to find you a hom
 <!-- Photo Gallery Section -->
   <section class="photo-gallery-section">
     <div class="gallery-header">
-      <h2>PHOTO GALLERY</h2>
+      <h2 class="section-title">PHOTO GALLERY</h2>
     </div>
 
     <div class="gallery-wrapper">

@@ -53,3 +53,13 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % totalSlides;
   updateGallery();
 });
+
+// Favorite Icon Toggle
+document.querySelectorAll('.favorite-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('active');
+    const heart = icon.querySelector('i');
+    heart.classList.toggle('fas');
+    heart.classList.toggle('far');
+  });
+});
